@@ -444,7 +444,7 @@ sessionInfo()
 #>  [1] tidyselect_1.1.1     xfun_0.28            haven_2.4.3         
 #>  [4] colorspace_2.0-2     vctrs_0.3.8          generics_0.1.1      
 #>  [7] blob_1.2.2           utf8_1.2.2           rlang_0.4.12        
-#> [10] pillar_1.6.4         glue_1.5.1           sandpaper_0.0.0.9070
+#> [10] pillar_1.6.4         glue_1.5.1           sandpaper_0.0.0.9073
 #> [13] withr_2.4.3          DBI_1.1.1            bit64_4.0.5         
 #> [16] dbplyr_2.1.1         modelr_0.1.8         readxl_1.3.1        
 #> [19] lifecycle_1.0.1      munsell_0.5.0        gtable_0.3.0        
@@ -506,6 +506,6 @@ comfortable eventually creating your own scripts.
 
 
 
-<p style="text-align: right; font-size: small;">Page built on: 📆 2021-12-06 ‒ 🕢 20:21:55</p>
+<p style="text-align: right; font-size: small;">Page built on: 📆 2022-01-04 ‒ 🕢 00:37:41</p>
 
 
