@@ -247,6 +247,16 @@ surveys %>%
 
 ### Mutate
 
+:::::::::::::::::::::::::::::::::::::::::::: instructor
+
+While working with the example for mutate(), it is difficult to see the “weight” 
+columns on a zoomed in RStudio screen. **Including a select() command to select the
+columns “weight_kg” and “weight_lb” makes it easier to view how the “weight” 
+columns are changed.**
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
 Frequently you'll want to create new columns based on the values in existing
 columns, for example to do unit conversions, or to find the ratio of values in two
 columns. For this we'll use `mutate()`.
@@ -860,6 +870,6 @@ write_csv(surveys_complete, file = "data/surveys_complete.csv")
 
 
 
-<p style="text-align: right; font-size: small;">Page built on: 📆 2022-07-11 ‒ 🕢 22:10:47</p>
+<p style="text-align: right; font-size: small;">Page built on: 📆 2022-07-15 ‒ 🕢 16:13:41</p>
 
 
