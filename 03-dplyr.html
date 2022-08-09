@@ -78,11 +78,11 @@
   Data Analysis and Visualisation in R for Ecologists
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 60%" class="percentage">
-    60%
+<aside class="col-md-12 lesson-progress"><div style="width: 50%" class="percentage">
+    50%
   </div>
   <div class="progress data">
-    <div class="progress-bar data" role="progressbar" style="width: 60%" aria-valuenow="60" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar data" role="progressbar" style="width: 50%" aria-valuenow="50" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -206,6 +206,15 @@
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush8">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading8">
+        <a href="06-pyramid-example.html">7. Pull Request Workflow Example</a>
+    </div><!--/div.accordion-header-->
+        
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -264,7 +273,7 @@
 
         
 
-<section id="data-manipulation-using-dplyr-and-tidyr"><h2 class="section-heading">Data manipulation using <strong><code>dplyr</code></strong> and <strong><code>tidyr</code></strong>
+<section id="data-manipulation-using-dplyr-and-tidyr"><h2 class="section-heading">Data manipulation using <strong><code>dplyr</code></strong> and <strong><code>tidyr</code></strong><a class="anchor" aria-label="anchor" href="#data-manipulation-using-dplyr-and-tidyr"></a>
 </h2>
 <hr class="half-width"><p>Bracket subsetting is handy, but it can be cumbersome and difficult to read, especially for complicated operations. Enter <strong><code>dplyr</code></strong>. <strong><code>dplyr</code></strong> is a package for helping with tabular data manipulation. It pairs nicely with <strong><code>tidyr</code></strong> which enables you to swiftly convert between different data formats for plotting and analysis.</p>
 <p>The <strong><code>tidyverse</code></strong> package is an “umbrella-package” that installs <strong><code>tidyr</code></strong>, <strong><code>dplyr</code></strong>, and several other useful packages for data analysis, such as <strong><code>ggplot2</code></strong>, <strong><code>tibble</code></strong>, etc.</p>
@@ -273,7 +282,8 @@
 <li>R expressions are used in a non standard way, which can be confusing for new learners.</li>
 <li>The existence of hidden arguments having default operations that new learners are not aware of.</li>
 </ol><p>You should already have installed and loaded the <strong><code>tidyverse</code></strong> package. If you haven’t already done so, you can type <code>install.packages("tidyverse")</code> straight into the console. Then, type <code><a href="https://tidyverse.tidyverse.org" class="external-link">library(tidyverse)</a></code> to load the package.</p>
-</section><section id="what-are-dplyr-and-tidyr"><h2 class="section-heading">What are <strong><code>dplyr</code></strong> and <strong><code>tidyr</code></strong>?</h2>
+</section><section id="what-are-dplyr-and-tidyr"><h2 class="section-heading">What are <strong><code>dplyr</code></strong> and <strong><code>tidyr</code></strong>?<a class="anchor" aria-label="anchor" href="#what-are-dplyr-and-tidyr"></a>
+</h2>
 <hr class="half-width"><p>The package <strong><code>dplyr</code></strong> provides helper tools for the most common data manipulation tasks. It is built to work directly with data frames, with many common tasks optimized by being written in a compiled language (C++). An additional feature is the ability to work directly with data stored in an external database. The benefits of doing this are that the data can be managed natively in a relational database, queries can be conducted on that database, and only the results of the query are returned.</p>
 <p>This addresses a common problem with R in that all operations are conducted in-memory and thus the amount of data you can work with is limited by available memory. The database connections essentially remove that limitation in that you can connect to a database of many hundreds of GB, conduct queries on it directly, and pull back into R only what you need for analysis.</p>
 <p>The package <strong><code>tidyr</code></strong> addresses the common problem of wanting to reshape your data for plotting and usage by different R functions. For example, sometimes we want data sets where we have one row per measurement. Other times we want a data frame where each measurement type has its own column, and rows are instead more aggregated groups (e.g., a time period, an experimental unit like a plot or a batch number). Moving back and forth between these formats is non-trivial, and <strong><code>tidyr</code></strong> gives you tools for this and more sophisticated data manipulation.</p>
@@ -332,7 +342,8 @@
 <code>arrange()</code>: sort results</li>
 <li>
 <code>count()</code>: count discrete values</li>
-</ul></section><section id="selecting-columns-and-filtering-rows"><h2 class="section-heading">Selecting columns and filtering rows</h2>
+</ul></section><section id="selecting-columns-and-filtering-rows"><h2 class="section-heading">Selecting columns and filtering rows<a class="anchor" aria-label="anchor" href="#selecting-columns-and-filtering-rows"></a>
+</h2>
 <hr class="half-width"><p>To select columns of a data frame, use <code>select()</code>. The first argument to this function is the data frame (<code>surveys</code>), and the subsequent arguments are the columns to keep.</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -355,7 +366,8 @@
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">filter</span><span class="op">(</span><span class="va">surveys</span>, <span class="va">year</span> <span class="op">==</span> <span class="fl">1995</span><span class="op">)</span></span></code></pre>
 </div>
-</section><section id="pipes"><h2 class="section-heading">Pipes</h2>
+</section><section id="pipes"><h2 class="section-heading">Pipes<a class="anchor" aria-label="anchor" href="#pipes"></a>
+</h2>
 <hr class="half-width"><p>What if you want to select and filter at the same time? There are three ways to do this: use intermediate steps, nested functions, or pipes.</p>
 <p>With intermediate steps, you create a temporary data frame and use that as input to the next function, like this:</p>
 <div class="codewrapper sourceCode" id="cb10">
@@ -404,7 +416,8 @@
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge" class="callout-inner">
-<h3 class="callout-title">Challenge</h3>
+<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#challenge"></a>
+</h3>
 <div class="callout-content">
 <p>Using pipes, subset the <code>surveys</code> data to include animals collected before 1995 and retain only the columns <code>year</code>, <code>sex</code>, and <code>weight</code>.</p>
 </div>
@@ -431,7 +444,8 @@
 </div>
 </div>
 </div>
-</section><section id="mutate"><h2 class="section-heading">Mutate</h2>
+</section><section id="mutate"><h2 class="section-heading">Mutate<a class="anchor" aria-label="anchor" href="#mutate"></a>
+</h2>
 <hr class="half-width"><p>Frequently you’ll want to create new columns based on the values in existing columns, for example to do unit conversions, or to find the ratio of values in two columns. For this we’ll use <code>mutate()</code>.</p>
 <p>To create a new column of weight in kg:</p>
 <div class="codewrapper sourceCode" id="cb15">
@@ -475,7 +489,8 @@
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-1" class="callout-inner">
-<h3 class="callout-title">Challenge</h3>
+<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#challenge-1"></a>
+</h3>
 <div class="callout-content">
 <p>Create a new data frame from the <code>surveys</code> data that meets the following criteria: contains only the <code>species_id</code> column and a new column called <code>hindfoot_cm</code> containing the <code>hindfoot_length</code> values (currently in mm) converted to centimeters. In this <code>hindfoot_cm</code> column, there are no <code>NA</code>s and all values are less than 3.</p>
 <p><strong>Hint</strong>: think about how the commands should be ordered to produce this data frame!</p>
@@ -505,7 +520,8 @@
 </div>
 </div>
 </div>
-</section><section id="split-apply-combine-data-analysis-and-the-summarize-function"><h2 class="section-heading">Split-apply-combine data analysis and the <code>summarize()</code> function</h2>
+</section><section id="split-apply-combine-data-analysis-and-the-summarize-function"><h2 class="section-heading">Split-apply-combine data analysis and the <code>summarize()</code> function<a class="anchor" aria-label="anchor" href="#split-apply-combine-data-analysis-and-the-summarize-function"></a>
+</h2>
 <hr class="half-width"><p>Many data analysis tasks can be approached using the <em>split-apply-combine</em> paradigm: split the data into groups, apply some analysis to each group, and then combine the results. Key function of <strong><code>dplyr</code></strong> for this workflow are <code>group_by()</code> and <code>summarize()</code>.</p>
 <div class="section level3">
 <h3 id="the-group_by-and-summarize-functions">The <code>group_by()</code> and <code>summarize()</code> functions<a class="anchor" aria-label="anchor" href="#the-group_by-and-summarize-functions"></a></h3>
@@ -665,7 +681,8 @@
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-2" class="callout-inner">
-<h3 class="callout-title">Challenge</h3>
+<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#challenge-2"></a>
+</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>How many animals were caught in each <code>plot_type</code> surveyed?</li>
 </ol></div>
@@ -696,7 +713,7 @@
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-2" class="callout-inner">
-<h3 class="callout-title">Challenge<em> (continued)</em>
+<h3 class="callout-title">Challenge<em> (continued)</em><a class="anchor" aria-label="anchor" href="#challenge-2"></a>
 </h3>
 <div class="callout-content">
 <ol start="2" style="list-style-type: decimal"><li>Use <code>group_by()</code> and <code>summarize()</code> to find the mean, min, and max hindfoot length for each species (using <code>species_id</code>). Also add the number of observations (hint: see <code>?n</code>).</li>
@@ -735,7 +752,7 @@
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-2" class="callout-inner">
-<h3 class="callout-title">Challenge<em> (continued)</em>
+<h3 class="callout-title">Challenge<em> (continued)</em><a class="anchor" aria-label="anchor" href="#challenge-2"></a>
 </h3>
 <div class="callout-content">
 <ol start="3" style="list-style-type: decimal"><li>What was the heaviest animal measured in each year? Return the columns <code>year</code>, <code>genus</code>, <code>species_id</code>, and <code>weight</code>.</li>
@@ -768,7 +785,8 @@
 </div>
 </div>
 </div>
-</section><section id="reshaping-with-gather-and-spread"><h2 class="section-heading">Reshaping with gather and spread</h2>
+</section><section id="reshaping-with-gather-and-spread"><h2 class="section-heading">Reshaping with gather and spread<a class="anchor" aria-label="anchor" href="#reshaping-with-gather-and-spread"></a>
+</h2>
 <hr class="half-width"><p>In the <a href="https://datacarpentry.org/spreadsheet-ecology-lesson/01-format-data/" class="external-link">spreadsheet lesson</a>, we discussed how to structure our data leading to the four rules defining a tidy dataset:</p>
 <ol style="list-style-type: decimal"><li>Each variable has its own column</li>
 <li>Each observation has its own row</li>
@@ -862,7 +880,8 @@
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-3" class="callout-inner">
-<h3 class="callout-title">Challenge</h3>
+<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#challenge-3"></a>
+</h3>
 <div class="callout-content">
 <ol style="list-style-type: decimal"><li>Spread the <code>surveys</code> data frame with <code>year</code> as columns, <code>plot_id</code> as rows, and the number of genera per plot as the values. You will need to summarize before reshaping, and use the function <code>n_distinct()</code> to get the number of unique genera within a particular chunk of data. It’s a powerful function! See <code>?n_distinct</code> for more.</li>
 </ol></div>
@@ -906,7 +925,7 @@
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-3" class="callout-inner">
-<h3 class="callout-title">Challenge<em> (continued)</em>
+<h3 class="callout-title">Challenge<em> (continued)</em><a class="anchor" aria-label="anchor" href="#challenge-3"></a>
 </h3>
 <div class="callout-content">
 <ol start="2" style="list-style-type: decimal"><li>Now take that data frame and <code>gather()</code> it again, so each row is a unique <code>plot_id</code> by <code>year</code> combination.</li>
@@ -938,7 +957,7 @@
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-3" class="callout-inner">
-<h3 class="callout-title">Challenge<em> (continued)</em>
+<h3 class="callout-title">Challenge<em> (continued)</em><a class="anchor" aria-label="anchor" href="#challenge-3"></a>
 </h3>
 <div class="callout-content">
 <ol start="3" style="list-style-type: decimal"><li>The <code>surveys</code> data set has two measurement columns: <code>hindfoot_length</code> and <code>weight</code>. This makes it difficult to do things like look at the relationship between mean values of each measurement per year in different plot types. Let’s walk through a common solution for this type of problem. First, use <code>gather()</code> to create a dataset where we have a key column called <code>measurement</code> and a <code>value</code> column that takes on the value of either <code>hindfoot_length</code> or <code>weight</code>. <em>Hint</em>: You’ll need to specify which columns are being gathered.</li>
@@ -970,7 +989,7 @@
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="challenge-3" class="callout-inner">
-<h3 class="callout-title">Challenge<em> (continued)</em>
+<h3 class="callout-title">Challenge<em> (continued)</em><a class="anchor" aria-label="anchor" href="#challenge-3"></a>
 </h3>
 <div class="callout-content">
 <ol start="4" style="list-style-type: decimal"><li>With this new data set, calculate the average of each <code>measurement</code> in each <code>year</code> for each different <code>plot_type</code>. Then <code>spread()</code> them into a data set with a column for <code>hindfoot_length</code> and <code>weight</code>. <em>Hint</em>: You only need to specify the key and value columns for <code>spread()</code>.</li>
@@ -1005,7 +1024,8 @@
 </div>
 </div>
 </div>
-</section><section id="exporting-data"><h2 class="section-heading">Exporting data</h2>
+</section><section id="exporting-data"><h2 class="section-heading">Exporting data<a class="anchor" aria-label="anchor" href="#exporting-data"></a>
+</h2>
 <hr class="half-width"><p>Now that you have learned how to use <strong><code>dplyr</code></strong> to extract information from or summarize your raw data, you may want to export these new data sets to share them with your collaborators or for archival.</p>
 <p>Similar to the <code>read_csv()</code> function used for reading CSV files into R, there is a <code>write_csv()</code> function that generates CSV files from data frames.</p>
 <p>Before using <code>write_csv()</code>, we are going to create a new folder, <code>data</code>, in our working directory that will store this generated dataset. We don’t want to write generated datasets in the same directory as our raw data. It’s good practice to keep them separate. The <code>data_raw</code> folder should only contain the raw, unaltered data, and should be left alone to make sure we don’t delete or modify it. In contrast, our script will generate the contents of the <code>data</code> directory, so even if the files it contains are deleted, we can always re-generate them.</p>
@@ -1069,7 +1089,7 @@ Page built on: 📆 2022-07-20 ‒ 🕢 00:05:12
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.9.0" class="external-link">sandpaper (0.9.0)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.9.1" class="external-link">sandpaper (0.9.1)</a>,
         <a href="https://github.com/carpentries/pegboard/tree/0.3.0" class="external-link">pegboard (0.3.0)</a>,
       and <a href="https://github.com/carpentries/varnish" class="external-link">varnish (0.2.3)</a>.</p>
 			</div>
@@ -1091,7 +1111,7 @@ Page built on: 📆 2022-07-20 ‒ 🕢 00:05:12
   "creativeWorkStatus": "active",
   "url": "https://fishtree-attempt.github.io/R-ecology-lesson/03-dplyr.html",
   "identifier": "https://fishtree-attempt.github.io/R-ecology-lesson/03-dplyr.html",
-  "dateCreated": "2022-07-20",
+  "dateCreated": "2022-08-09",
   "dateModified": "2022-07-20",
   "datePublished": "2022-08-09"
 }
