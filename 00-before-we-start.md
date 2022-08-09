@@ -438,23 +438,28 @@ sessionInfo()
 #> other attached packages:
 #>  [1] RSQLite_2.2.9   forcats_0.5.1   stringr_1.4.0   dplyr_1.0.7    
 #>  [5] purrr_0.3.4     readr_2.1.1     tidyr_1.1.4     tibble_3.1.6   
-#>  [9] ggplot2_3.3.5   tidyverse_1.3.1 knitr_1.36     
+#>  [9] ggplot2_3.3.5   tidyverse_1.3.2 knitr_1.36     
 #> 
 #> loaded via a namespace (and not attached):
-#>  [1] tidyselect_1.1.1 xfun_0.28        haven_2.4.3      colorspace_2.0-2
-#>  [5] vctrs_0.3.8      generics_0.1.1   blob_1.2.2       utf8_1.2.2      
-#>  [9] rlang_0.4.12     pillar_1.6.4     glue_1.5.1       withr_2.4.3     
-#> [13] DBI_1.1.1        bit64_4.0.5      dbplyr_2.1.1     modelr_0.1.8    
-#> [17] readxl_1.3.1     lifecycle_1.0.1  munsell_0.5.0    gtable_0.3.0    
-#> [21] cellranger_1.1.0 rvest_1.0.2      memoise_2.0.1    evaluate_0.14   
-#> [25] fastmap_1.1.0    tzdb_0.2.0       fansi_0.5.0      highr_0.9       
-#> [29] broom_0.7.10     Rcpp_1.0.7       renv_0.15.5      scales_1.1.1    
-#> [33] backports_1.4.0  cachem_1.0.6     jsonlite_1.7.2   bit_4.0.4       
-#> [37] fs_1.5.1         hms_1.1.1        stringi_1.7.6    grid_4.2.1      
-#> [41] cli_3.1.0        tools_4.2.1      magrittr_2.0.1   crayon_1.4.2    
-#> [45] pkgconfig_2.0.3  ellipsis_0.3.2   xml2_1.3.3       reprex_2.0.1    
-#> [49] lubridate_1.8.0  assertthat_0.2.1 httr_1.4.2       rstudioapi_0.13 
-#> [53] R6_2.5.1         compiler_4.2.1
+#>  [1] tidyselect_1.1.1    xfun_0.28           haven_2.4.3        
+#>  [4] gargle_1.2.0        colorspace_2.0-2    vctrs_0.3.8        
+#>  [7] generics_0.1.1      blob_1.2.2          utf8_1.2.2         
+#> [10] rlang_0.4.12        pillar_1.6.4        glue_1.5.1         
+#> [13] withr_2.4.3         DBI_1.1.1           bit64_4.0.5        
+#> [16] dbplyr_2.1.1        modelr_0.1.8        readxl_1.3.1       
+#> [19] lifecycle_1.0.1     munsell_0.5.0       gtable_0.3.0       
+#> [22] cellranger_1.1.0    rvest_1.0.2         memoise_2.0.1      
+#> [25] evaluate_0.14       fastmap_1.1.0       tzdb_0.2.0         
+#> [28] fansi_0.5.0         highr_0.9           broom_0.7.10       
+#> [31] Rcpp_1.0.7          renv_0.15.5         scales_1.1.1       
+#> [34] backports_1.4.0     googlesheets4_1.0.0 cachem_1.0.6       
+#> [37] jsonlite_1.7.2      bit_4.0.4           fs_1.5.1           
+#> [40] hms_1.1.1           stringi_1.7.8       grid_4.2.1         
+#> [43] cli_3.1.0           tools_4.2.1         magrittr_2.0.1     
+#> [46] crayon_1.4.2        pkgconfig_2.0.3     ellipsis_0.3.2     
+#> [49] xml2_1.3.3          reprex_2.0.1        googledrive_2.0.0  
+#> [52] lubridate_1.8.0     assertthat_0.2.1    httr_1.4.2         
+#> [55] R6_2.5.1            compiler_4.2.1
 ```
 
 
@@ -500,6 +505,6 @@ comfortable eventually creating your own scripts.
 
 
 
-<p style="text-align: right; font-size: small;">Page built on: 📆 2022-07-15 ‒ 🕢 16:13:33</p>
+<p style="text-align: right; font-size: small;">Page built on: 📆 2022-08-09 ‒ 🕢 14:35:01</p>
 
 
