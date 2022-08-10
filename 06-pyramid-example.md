@@ -17,15 +17,17 @@ rendered lesson content that would be made by a pull request.
 pie(
   c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5), 
   init.angle = 315, 
-  col = c("deepskyblue", "yellow", "yellow3"), 
+  col = c(#7FFFD4, "yellow", "yellow3"), 
   border = FALSE
 )
 ```
 
-<div class="figure" style="text-align: center">
-<img src="fig/06-pyramid-example-rendered-pyramid-1.png" alt="pie chart illusion of a pyramid"  />
-<p class="caption">Sun arise each and every morning</p>
-</div>
+```{.error}
+Error: <text>:7:0: unexpected end of input
+5:   border = FALSE
+6: )
+  ^
+```
 
 ::: challenge
 
